@@ -6,6 +6,7 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import '../../../core/utili/theme/app_spacing.dart';
 import '../core/constants/app_assets.dart';
+import '../core/utili/theme/app_styles.dart';
 import '../features/dashboard/widgets/chart_detailes_lable.dart';
 
 class ProgramMetricsCard extends StatelessWidget {
@@ -50,20 +51,13 @@ class ProgramMetricsCard extends StatelessWidget {
                 Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    const Text(
+                    Text(
                       AppTexts.totalPrograms,
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.black54,
-                      ),
+                      style: AppStyle.styleNormal14
                     ),
                     Text(
                       totalPrograms,
-                      style: const TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: AppStyle.styleNormal24
                     ),
                   ],
                 ),

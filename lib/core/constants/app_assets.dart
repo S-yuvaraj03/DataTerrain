@@ -1,6 +1,6 @@
 class AppAssets {
-  static const String avatar = 'assets/avatar.png';
-  static const String link = 'assets/icons/link.svg';
+  static const String avatar = 'assets/avatar.jpg';
+  static const String link = 'assets/icons/link.png';
   static const String search = 'assets/icons/search.svg';
   static const String user = 'assets/icons/users.svg';
   static const String analytics = 'assets/icons/analytics.svg';

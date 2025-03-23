@@ -2,6 +2,8 @@ import 'package:dataterrain/core/utili/theme/app_color.dart';
 import 'package:dataterrain/core/utili/theme/app_spacing.dart';
 import 'package:flutter/material.dart';
 
+import '../core/utili/theme/app_styles.dart';
+
 class ShadowMorphCard extends StatelessWidget {
   final String appBarTitle;
   final Widget actionButton; // Custom button passed as child
@@ -58,10 +60,7 @@ class ShadowMorphCard extends StatelessWidget {
                     const SizedBox(width: 8),
                     Text(
                       appBarTitle,
-                      style: const TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: AppStyle.styleBold16,
                     ),
                     if (trailing != null) ...[
                       const SizedBox(

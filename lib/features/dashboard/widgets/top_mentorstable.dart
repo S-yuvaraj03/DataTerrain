@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import '../../../core/constants/app_assets.dart';
 import '../../../core/constants/app_text.dart';
 import '../../../core/utili/theme/app_color.dart';
@@ -96,12 +95,10 @@ class _TopMentorsState extends State<TopMentors> {
 
     return ShadowMorphCard(
         appBarTitle: AppTexts.topMentors,
-        trailing: Container(
-          child: SvgPicture.asset(
-            AppAssets.link,
-            height: 24,
-            width: 24,
-          ),
+        trailing: SizedBox(
+          height: 25,
+          width: 25,
+          child: Image.asset(AppAssets.link),
         ),
         actionButton: Align(
           alignment: Alignment.topRight,

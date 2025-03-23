@@ -31,14 +31,14 @@ class ChartLable extends StatelessWidget {
         ),
         Text(
           lable,
-          style: style.stylew400,
+          style: AppStyle.styleW600_14,
         ),
         const SizedBox(
           width: AppSpacing.spacing20x,
         ),
         Text(
           value,
-          style: style.styleBold,
+          style: AppStyle.styleW600_16,
         ),
       ],
     );

@@ -48,8 +48,8 @@ class _BottomNavigatorState extends State<BottomNavigator> {
             icon: SvgPicture.asset(
               AppAssets.dashboard,
               semanticsLabel: 'Dashboard Icon',
-              height: 15,
-              width: 15,
+              height: 24,
+              width: 24,
               color: _selectedIndex == 0 ? Colors.blueAccent : Colors.black,
             ),
             label: 'Dashboard',
@@ -58,8 +58,8 @@ class _BottomNavigatorState extends State<BottomNavigator> {
             icon: SvgPicture.asset(
               AppAssets.programs,
               semanticsLabel: 'Programs Icon',
-              height: 15,
-              width: 15,
+              height: 24,
+              width: 24,
               color: _selectedIndex == 1 ? Colors.blueAccent : Colors.black,
             ),
             label: 'Programs',
@@ -68,8 +68,8 @@ class _BottomNavigatorState extends State<BottomNavigator> {
             icon: SvgPicture.asset(
               AppAssets.user,
               semanticsLabel: 'Users Icon',
-              height: 15,
-              width: 15,
+              height: 24,
+              width: 24,
               color: _selectedIndex == 2 ? Colors.blueAccent : Colors.black,
             ),
             label: 'Users',
@@ -78,8 +78,8 @@ class _BottomNavigatorState extends State<BottomNavigator> {
             icon: SvgPicture.asset(
               AppAssets.request,
               semanticsLabel: 'requests Icon',
-              height: 15,
-              width: 15,
+              height: 24,
+              width: 24,
               color: _selectedIndex == 3 ? Colors.blueAccent : Colors.black,
             ),
             label: 'Requests',

@@ -6,6 +6,8 @@ import 'package:dataterrain/widgets/drawer_header.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../core/utili/theme/app_styles.dart';
+
 class KDrawer extends StatelessWidget {
   const KDrawer({super.key});
 
@@ -113,10 +115,7 @@ class KDrawer extends StatelessWidget {
           const SizedBox(width: 16),
           Text(
             title,
-            style: const TextStyle(
-              fontSize: 16,
-              color: Color(0xFF0F172A),
-            ),
+            style: AppStyle.styleNormal16,
           ),
         ],
       ),

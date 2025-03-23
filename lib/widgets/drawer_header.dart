@@ -24,14 +24,14 @@ class KDrawerHeader extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 12),
-          const Text(
+          Text(
             'John Doe',
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+            style: AppStyle.styleW400_14,
           ),
           const SizedBox(height: 4),
           Text(
             'Mentor',
-            style: AppStyle().styleNormal,
+            style: AppStyle.styleNormal12,
           ),
         ],
       ),

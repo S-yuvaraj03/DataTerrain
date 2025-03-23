@@ -20,4 +20,5 @@ class AppColor {
   static const Color piechart3 = Color(0xFF1D5BBF);
   static const Color piechart4 = Color(0xFFD4E6FF);
   static const Color tablecolor = Color(0xFFD9E4F2);
+  static const Color mainblackcolor = Color(0xFF18283D);
 }

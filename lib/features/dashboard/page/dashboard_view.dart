@@ -1,7 +1,6 @@
 
+import 'package:dataterrain/widgets/appbar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import '../../../core/constants/app_assets.dart';
 import '../../../widgets/drawer.dart';
 import '../widgets/planned_programs.dart';
 import '../widgets/program_mode_metrices.dart';
@@ -17,60 +16,9 @@ class DashboardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final double Kheight = MediaQuery.of(context).size.height;
     return Scaffold(
-      endDrawer: KDrawer(),
+      endDrawer: const KDrawer(),
       backgroundColor: Colors.white70,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        leading: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: GestureDetector(
-            onTap: () {
-              // Handle tap
-            },
-            child: ClipOval(
-              child: Image.asset(
-                AppAssets.avatar,
-                width: 40,
-                height: 40,
-                fit: BoxFit.cover, // Ensures proper scaling
-              ),
-            ),
-          ),
-        ),
-        actions: [
-          IconButton(
-            icon: SvgPicture.asset(
-              AppAssets.search,
-              semanticsLabel: 'Search Image',
-              height: 36,
-              width: 36,
-            ),
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: SvgPicture.asset(
-              AppAssets.notification,
-              semanticsLabel: 'notification Image',
-              height: 36,
-              width: 36,
-            ),
-            onPressed: () {},
-          ),
-          Builder(
-            builder: (context) => IconButton(
-              onPressed: () {
-                Scaffold.of(context).openEndDrawer();
-              },
-              icon: SvgPicture.asset(
-                AppAssets.menu,
-                semanticsLabel: 'Menu Image',
-                height: 20,
-                width: 20,
-              ),
-            ),
-          ),
-        ],
-      ),
+      appBar: const KAppBar(),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(

@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import '../../../core/constants/app_text.dart';
 import '../../../core/utili/theme/app_color.dart';
+import '../../../core/utili/theme/app_styles.dart';
 import '../../../widgets/app_buttons.dart';
 import '../../../widgets/custom_cards.dart';
 
@@ -40,10 +41,9 @@ Widget _buildItem(String count, String label, Color color) {
       ),
       child: Text(
         count,
-        style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+        style: AppStyle.styleBold16),
       ),
-    ),
     const SizedBox(width: 16),
-    Text(label),
+    Text(label, style: AppStyle.styleW600_14,),
   ]);
 }

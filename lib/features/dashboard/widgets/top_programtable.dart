@@ -4,12 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:dataterrain/widgets/custom_cards.dart';
 import 'package:dataterrain/widgets/app_buttons.dart';
 
+import '../../../core/constants/app_assets.dart';
 import '../../../widgets/reusable_data_table.dart';
 
 class TopProgram extends StatefulWidget {
   const TopProgram({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _TopProgramState createState() => _TopProgramState();
 }
 
@@ -26,11 +28,41 @@ class _TopProgramState extends State<TopProgram> {
   ];
 
   final List<Map<String, dynamic>> tableData = [
-    {'Program Name': 'Leadership Growth', 'Category': 'Engineer', 'Created By': '(202) 555-0191', 'Rating': 'contact@creativehub.com', 'View': ''},
-    {'Program Name': 'Tech Mentorship', 'Category': 'Doctor', 'Created By': '(303) 555-0123', 'Rating': 'support@innovativeideas.com', 'View': ''},
-    {'Program Name': 'Career Guidance', 'Category': 'Artist', 'Created By': '(404) 555-0145', 'Rating': 'info@techsolutions.com', 'View': ''},
-    {'Program Name': 'Business Skills', 'Category': 'Chef', 'Created By': '(505) 555-0167', 'Rating': 'hello@designworld.com', 'View': ''},
-    {'Program Name': 'Soft Skills', 'Category': 'Teacher', 'Created By': '(606) 555-0189', 'Rating': 'team@futuretech.com', 'View': ''},
+    {
+      'Program Name': 'Leadership Growth',
+      'Category': 'Engineer',
+      'Created By': '(202) 555-0191',
+      'Rating': 'contact@creativehub.com',
+      'View': ''
+    },
+    {
+      'Program Name': 'Tech Mentorship',
+      'Category': 'Doctor',
+      'Created By': '(303) 555-0123',
+      'Rating': 'support@innovativeideas.com',
+      'View': ''
+    },
+    {
+      'Program Name': 'Career Guidance',
+      'Category': 'Artist',
+      'Created By': '(404) 555-0145',
+      'Rating': 'info@techsolutions.com',
+      'View': ''
+    },
+    {
+      'Program Name': 'Business Skills',
+      'Category': 'Chef',
+      'Created By': '(505) 555-0167',
+      'Rating': 'hello@designworld.com',
+      'View': ''
+    },
+    {
+      'Program Name': 'Soft Skills',
+      'Category': 'Teacher',
+      'Created By': '(606) 555-0189',
+      'Rating': 'team@futuretech.com',
+      'View': ''
+    },
   ];
 
   @override
@@ -60,10 +92,16 @@ class _TopProgramState extends State<TopProgram> {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     double indicatorWidth = screenWidth * 0.8; // 80% of screen width
-    double indicatorStep = indicatorWidth / 5; // Divides into 5 steps (20% each)
+    double indicatorStep =
+        indicatorWidth / 5; // Divides into 5 steps (20% each)
 
     return ShadowMorphCard(
       appBarTitle: AppTexts.topPrograms,
+      trailing: SizedBox(
+        height: 25,
+        width: 25,
+        child: Image.asset(AppAssets.link),
+      ),
       actionButton: Align(
         alignment: Alignment.topRight,
         child: CustomInkWellButton(
@@ -98,7 +136,9 @@ class _TopProgramState extends State<TopProgram> {
                     left: scrollProgress *
                         (indicatorWidth - indicatorStep), // Moves in steps
                     child: Container(
-                      width: screenWidth <600? indicatorStep + 15 : indicatorStep + 150, // 4-inch wide moving bar
+                      width: screenWidth < 600
+                          ? indicatorStep + 15
+                          : indicatorStep + 150, // 4-inch wide moving bar
                       height: 4,
                       decoration: BoxDecoration(
                         color: Colors.black, // Active indicator color

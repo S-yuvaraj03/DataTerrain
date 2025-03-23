@@ -1,4 +1,5 @@
 
+import 'package:dataterrain/core/utili/theme/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 import '../../../core/constants/app_assets.dart';
@@ -40,7 +41,7 @@ class ProgramStatusMetricsWidget extends StatelessWidget {
                         getTitlesWidget: (value, meta) {
                           return Text(
                             "${value.toInt()}",
-                            style: const TextStyle(fontSize: 12),
+                            style: AppStyle.styleNormal12,
                           );
                         },
                       ),
@@ -153,7 +154,7 @@ class ProgramStatusMetricsWidget extends StatelessWidget {
           ),
         ),
         const SizedBox(width: 4),
-        Text(text),
+        Text(text, style: AppStyle.styleW400_14,),
       ],
     );
   }
